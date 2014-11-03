@@ -20,11 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'xxunk9yu+v41vb(98m#@+#tdwo+r#0zb0hq=m!k#+3)(6z6t4d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = []
+# Needed when DEBUG=False
+ALLOWED_HOSTS = ['staging-tdd.murrx.me']
 
 
 # Application definition
