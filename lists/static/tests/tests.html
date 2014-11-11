@@ -15,7 +15,7 @@
         </form>
     </div>
 
-    <script src ="http://code.jquery.com/jquery.min.js"></script>
+    <script src ="jquery.min.js"></script>
     <script src="qunit.js"></script>
     <script src="../list.js"></script>
     <script>
@@ -28,6 +28,11 @@ test("errors should be hidden on keypress", function () {
 
 test("errors not be hidden unless there is a keypress", function() {
         equal($('.has-error').is(':visible'), true);
+});
+
+test("errors should be hidden on focus", function () {
+        $('input').trigger('focus');
+        equal($('.has-error').is(':visible'),false);
 });
     </script>
 
