@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Javascript tests</title>
-    <link rel="stylesheet" href="qunit.css">
+    <link rel="stylesheet" href="../../../superlists/static/tests/qunit.css">
 </head>
 
 <body>
@@ -15,8 +15,8 @@
         </form>
     </div>
 
-    <script src ="jquery.min.js"></script>
-    <script src="qunit.js"></script>
+    <script src ="../jquery.min.js"></script>
+    <script src="../../../superlists/static/tests/qunit.js"></script>
     <script src="../list.js"></script>
     <script>
 /*global $, test, equal */
@@ -30,10 +30,6 @@ test("errors not be hidden unless there is a keypress", function() {
         equal($('.has-error').is(':visible'), true);
 });
 
-test("errors should be hidden on focus", function () {
-        $('input').trigger('focus');
-        equal($('.has-error').is(':visible'),false);
-});
     </script>
 
 </body>
